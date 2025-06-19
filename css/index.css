@@ -273,7 +273,7 @@
                 height: auto;
                 text-align: center;
                 left: calc(50% - 50vw);
-                
+
             }
 
             .text-slogan span {
@@ -2668,7 +2668,7 @@
             }
 
             .slogan-banner.option-02 {
-                top: 95vh;
+                top: 70vh;
                 transform: translateY(-100%);
                 left: 100px;
                 color: #fff
@@ -2950,7 +2950,8 @@
                 display: block;
                 font-size: 60px;
                 font-weight: 700;
-                color: #08fd5e
+                color: #08fd5e;
+                margin-right: 100px;
             }
 
             .home-jewelry .wrap-large {
@@ -7559,9 +7560,9 @@
                 height: 400px
             }
 
-            .social,.social ul {
-                width: auto;
-                height: auto
+            .social img {
+                width: 280px;
+                height: 700px
             }
 
             .social {
@@ -8485,9 +8486,9 @@
                 }
 
                 .footer .color-strip {
-                    top: calc(50% - 180px);
+                    top: 0;
                     width: 180px;
-                    height: 360px
+                    height: 500px
                 }
 
                 .social {

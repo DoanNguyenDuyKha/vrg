@@ -27,13 +27,13 @@
     mask-image: url(../images/mask2.svg)
 }
 
-.color-strip {
+/* .color-strip {
     background: url(../images/color-trip.svg) no-repeat center center/cover
-}
+} */
 
-.footer .color-strip,.home-partner .color-strip {
-    background: url(../images/color-trip-02.svg) no-repeat center center/cover
-}
+/* .footer .color-strip,.home-partner .color-strip {
+    background: url(../../../images/index/Group\ 99.png) no-repeat center center/cover
+} */
 
 .about-business .color-strip {
     background: url(../images/color-trip-03.svg) no-repeat center center/cover
