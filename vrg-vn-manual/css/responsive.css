@@ -1,0 +1,547 @@
+@media only screen and (max-width: 1024px) {
+    .main-logo-shop .col-md-2 {
+        width: 15%;
+    }
+
+    .main-logo-shop .col-md-3 {
+        width: 26.666667%;
+    }
+
+    #main-menu>.container>ul>li>a {
+        padding: 12px 16px;
+    }
+
+    #slider-home .item .overlay-item .content-overlay .title-1 {
+        font-size: 20px;
+        line-height: inherit;
+    }
+
+    .page-heading h2 span {
+        display: none;
+    }
+
+    .main-product-detail {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .vsip-news-content .post-thumb img {
+        height: auto
+    }
+
+    .header-site-mobile {
+        display: block;
+    }
+
+    .header-sticky.sticky .logo-menu {
+    }
+
+    .header-site-pc {
+        display: none;
+    }
+
+    .main-menu>ul>li>a.click-search {
+        width: 37px;
+        height: 37px;
+        color: #808080;
+        border: 1px solid #323232;
+        text-align: center;
+        line-height: 37px;
+        padding: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-top: 18px;
+    }
+
+    .main-menu>ul>li>a.click-search {
+        margin-top: 0;
+    }
+
+    .nav-search {
+        position: absolute;
+        right: 0;
+        top: 50px;
+        z-index: 11;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+        -webkit-transition: height .5s ease;
+        transition: height .5s ease;
+        background: -o-linear-gradient(right, #16b4b7, #036ea7);
+        background: -moz-linear-gradient(right, #16b4b7, #036ea7);
+        background: linear-gradient(to right, #16b4b7 , #036ea7);
+        width: 100%;
+        padding: 20px;
+        top: unset!important;
+    }
+
+    .nav-search input[type=text] {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #ddd;
+        padding-left: 10px;
+        border-radius: 3px;
+    }
+
+    .nav-search.open {
+        visibility: visible;
+        opacity: 1;
+        top: 41px;
+    }
+
+    .nav-search form {
+        position: relative;
+    }
+
+    .nav-search form .icon-search {
+        position: absolute;
+        top: 11px;
+        right: 15px;
+    }
+
+    .logo {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .hc-nav-trigger.hc-nav-1 {
+        display: block!important;
+        top: unset;
+    }
+
+    .second-nav {
+        display: block;
+    }
+
+    .header-site-mobile .top-search {
+        /* position: absolute;     right: 15px;     top: 6px;*/
+    }
+
+    .language-top {
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        padding: 5px 0;
+        margin: 0;
+        background: #fff;
+        z-index: 99!important;
+        position: relative;
+    }
+
+    .logo-menu {
+        position: relative;
+        padding: 8px 0;
+    }
+
+    .click-search {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ddd;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        top: unset!important;
+        bottom: 8px;
+    }
+
+    .title-title .title-primary:before {
+        display: none;
+    }
+
+    .title-title .title-primary:after {
+        display: none;
+    }
+
+    .title-title .title-primary {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .business-areas .business-areas-left .title-1 {
+        dominant-baseline: 25px;
+    }
+
+    .business-areas .business-areas-left .item-business .title-2 {
+        font-size: 16px;
+    }
+
+    .business-areas .business-areas-left .item-business .title-2:after {
+        bottom: 8px;
+    }
+
+    .about-infrastructure .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .top-search .title-search {
+        font-size: 20px;
+        color: #fff;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 812px) {
+}
+
+@media only screen and (max-width: 736px) {
+    #slider-home .item .overlay-item .content-overlay {
+        display: none;
+    }
+
+    .info-home .nav-info-home .item {
+        width: calc((100% - 10px) / 2);
+        margin-bottom: 15px;
+    }
+
+    .info-home .nav-info-home .item:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .info-home .nav-info-home .item .title-1 {
+        font-size: 14px;
+    }
+
+    .title-title .title-primary {
+        font-size: 22px;
+    }
+
+    .info-home {
+        margin-top: 36px;
+    }
+
+    .content-bottom .item {
+        padding-bottom: 15px;
+    }
+
+    .business-areas .business-areas-left .title-1 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .business-areas {
+        padding: 30px 0;
+        margin-top: 10px;
+        background-size: cover;
+    }
+
+    .business-areas .business-areas-left .item-business ul li:hover .sub-menu {
+        left: 0;
+        width: 100%;
+    }
+
+    .slider-business {
+        margin-top: 10px;
+    }
+
+    .new-home {
+        padding-top: 30px;
+    }
+
+    .business-areas-left-mobile {
+        display: block;
+    }
+
+    .business-areas-left-pc {
+        display: none;
+    }
+
+    .business-areas .business-areas-left .item-business ul li .sub-menu {
+        visibility: visible;
+        opacity: 1;
+        display: none;
+    }
+
+    .business-areas .business-areas-left .item-business ul li a .icon {
+        width: 30px;
+        display: inline-block;
+        height: 20px;
+        text-align: center;
+        float: right;
+    }
+
+    .business-areas .business-areas-left .item-business ul li .sub-menu {
+        position: static;
+    }
+
+    .business-areas-left-mobile .nav-category>ul>li>a>.icon.active {
+        transform: rotateZ( 90deg );
+    }
+
+    .tabs a {
+        font-size: 14px;
+        margin-right: 4px;
+    }
+
+    .new-home .tabbedPanels {
+        padding-top: 20px;
+    }
+
+    .new-home .panel {
+        margin-top: 0;
+    }
+
+    .item-item-new .item1 .nav-image {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .item-item-new .item2 {
+        padding-bottom: 10px;
+    }
+
+    .product-home {
+        background: #f7f7f7;
+        padding: 30px 0;
+        margin-top: 0;
+    }
+
+    .footer-1 .col-md-10 {
+        width: 100%;
+    }
+
+    .footer-1 .col-md-2 {
+        width: 100%;
+    }
+
+    .footer-1 {
+        padding-top: 40px;
+    }
+
+    #footer-site {
+        margin-top: 20px;
+    }
+
+    .footer-1 .title-1 {
+        font-size: 16px;
+        line-height: 20px;
+        padding-bottom: 10px;
+    }
+
+    .business-areas:after {
+        display: none;
+    }
+
+    .slider-business .item img {
+        height: 210px;
+    }
+
+    .contact-page {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .contact-location {
+        min-height: inherit;
+        padding-bottom: 15px;
+    }
+
+    .pagenavi ul a {
+        margin-bottom: 5px;
+    }
+
+    .content-product-detail {
+        padding-top: 20px;
+    }
+
+    .content-product-detail h1 {
+        font-size: 20px;
+        line-height: inherit;
+    }
+
+    .main-overview .content-overview .item {
+        height: auto;
+    }
+
+    .main-overview {
+        margin-top: 25px;
+    }
+
+    .main-overview .content-overview {
+        margin-top: 20px;
+    }
+
+    .main-overview .content-overview-video iframe {
+        height: 300px;
+    }
+
+    .main-overview .content-overview-video {
+        margin-top: 10px;
+        padding: 30px 0;
+    }
+
+    .banner-child .overlay-banner {
+        display: none;
+    }
+
+    .share-holding-content {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .share-holding-img {
+        margin-bottom: 0px;
+    }
+
+    .share-holding-text .description-box {
+        font-size: 15px;
+    }
+
+    .share-holding-text {
+        padding: 15px;
+        margin-bottom: 15px;
+        height: auto;
+    }
+
+    .main-vision-cultural {
+        padding-top: 10px;
+    }
+
+    .about-culture__item {
+        padding: 25px 0;
+    }
+
+    .about-culture__item--content .description-box {
+        font-size: 15px;
+    }
+
+    .about-culture__item--content h4 {
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+
+    .page-heading h2 {
+        font-size: 20px;
+    }
+
+    .page-heading {
+        margin-top: 15px;
+    }
+
+    .about-content__module {
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-milestones__slider-item.style-2 .about-milestones__slider-item--inner {
+        margin-top: 0;
+    }
+
+    .about-milestones-inner {
+        margin-bottom: 25px;
+    }
+
+    .about-infrastructure {
+        padding-top: 15px;
+    }
+
+    .about-leaflet__item--title {
+        font-size: 16px;
+    }
+
+    .about-leaflet__item--link {
+        font-size: 13px;
+    }
+
+    .about-leaflet__item {
+        margin-bottom: 15px;
+    }
+
+    .about-leaflet .page-heading {
+        margin-bottom: 25px;
+    }
+
+    .about-leaflet .row {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .about-leaflet .col-md-3 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .tenants-item {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .vsip-news-content .news-page__item {
+        padding: 0;
+    }
+
+    #slider-mobile {
+        display: block!important;
+    }
+
+    #slider-home {
+        display: none!important;
+    }
+
+    .slider-banner {
+        display: none!important;
+    }
+
+    .about-infrastructure__item--icon {
+        width: 40px;
+        display: inline-block;
+        float: left;
+    }
+
+    .about-infrastructure .row {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .about-infrastructure .row .col-md-3 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .about-infrastructure__item--title h4 {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .about-infrastructure__item--title p {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .about-infrastructure .about-infrastructure__item {
+        min-height: 80px;
+        padding-bottom: 10px;
+    }
+
+    .video-tab {
+        display: none;
+    }
+
+    .list-img .slider-large .item img {
+        height: 215px;
+    }
+
+    .list-img .slider-small img {
+        height: 90px;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .about-map iframe {
+        height: 260px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+}
