@@ -2609,15 +2609,18 @@
                 display: inline-block;
                 color: #fff;
                 margin: 30px 0 0;
-                padding: 20px;
+                padding: 15px;
                 width: 200px;
                 text-align: center;
-                font-size: 15px;
+                font-size: 10px;
                 letter-spacing: 4px;
                 text-transform: uppercase;
                 border: 1px solid rgba(255,255,255,.6);
-                background: green;
+                background: #119A48;
                 color: #eee;
+                border-radius: 10px;
+                font-weight: bold;
+                transition: all .2s ease-in-out;
                 z-index: 10
             }
 
@@ -2833,7 +2836,7 @@
                 display: block;
                 width: 100%;
                 height: auto;
-                border-radius: 20px;
+                border-radius: 30px 0 30px 0;
                 box-shadow: 0 10px 20px rgba(0,0,0,.2);
                 height: var(--height-thumb);
                 overflow: hidden
@@ -2855,15 +2858,7 @@
                 z-index: 5
             }
 
-            .text-business-thumbs::before {
-                content: '';
-                position: absolute;
-                width: 40px;
-                height: 2px;
-                background-color: var(--coloractive);
-                top: 15px;
-                left: 30px
-            }
+           
 
             .text-business-thumbs h2,.title-jew-home h3 {
                 position: relative;
@@ -8336,9 +8331,11 @@
                 }
 
                 .view-more {
-                    width: 170px;
-                    font-size: 14px;
-                    padding: 17px
+                    width: 200px;
+                    font-size: 12px;
+                    padding: 17px;
+                    border-radius: 10px;
+                    font-weight: bold;
                 }
 
                 .box-jewelry-home .view-white.view-more.view-white {
@@ -8358,10 +8355,6 @@
                     padding: 20px
                 }
 
-                .text-business-thumbs::before {
-                    top: 10px;
-                    left: 20px
-                }
 
                 .arrows-business {
                     width: 130px
@@ -9779,8 +9772,8 @@
                     right: auto;
                     bottom: auto;
                     padding: 15px;
-                    font-size: 14px;
-                    width: 150px;
+                    font-size: 12px;
+                    width: 200px;
                     transform: none;
                     margin: 20px 0 0;
                     background: green;
