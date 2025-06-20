@@ -287,8 +287,8 @@
   padding: 0;
 }
 .header .logo img {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   display: block;
 }
 .header-title-group {
@@ -368,13 +368,35 @@
   border-bottom: 2px solid #e0e0e0;
 }
 .header-nav ul {
+  width: 98%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
   padding: 0;
   list-style: none;
+}
+.header-nav li {
+  position: relative;
+  flex: 1 1 0;
+  text-align: center;
+  font-size: 1rem;
+  padding: 14px 18px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+  background: none;
+}
+.header-nav li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background: #fff;
+  opacity: 0.8;
 }
 .header-nav li {
   color: #fff;
@@ -440,6 +462,7 @@
 }
 .header-center > div {
   text-align: center;
+  margin-top: 25px;
 }
 .header-title {
   font-size: 1.35rem;
@@ -449,7 +472,7 @@
   line-height: 1.1;
 }
 .header-slogan {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: #1ca046;
   margin-top: 2px;
   font-weight: 400;
@@ -460,6 +483,12 @@
   align-items: center;
   gap: 18px;
   justify-content: flex-end;
+}
+.header-custome {
+  position: sticky;
+  top: -105px;
+  background-color: #fff;
+  z-index: 100;
 }
 .header-nav li.active, .header-nav li:hover {
   background: #119A48;
@@ -1667,5 +1696,24 @@
 }
 .news-slider-dots .dot.active {
   background: #1ca046;
+}
+
+.title-business-below {
+  color: #eee;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: break-word;
 }
 

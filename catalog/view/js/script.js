@@ -3358,7 +3358,7 @@ var SlidePicture = {
               , t = Container.querySelector(".slider-progress-bar")
               , o = Container.querySelector(".slider-number");
             (t.style.width = (100 * e) / p.length + "%"),
-              (o.innerHTML = "0" + e + "/" + "0" + p.length);
+            (o.innerHTML = "0" + e + '<span class="slider-total">/' + (p.length < 10 ? '0' : '') + p.length + '</span>');
         }),
         d.addEventListener("swiperight", function(e) {
             f.click()
