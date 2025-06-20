@@ -523,6 +523,7 @@
     padding-left: 0;
     margin: 0 auto;
     margin-left: 24px;
+    margin-top: -30px;
   }
   .header-title {
     font-size: 0.8rem;
@@ -660,7 +661,13 @@
     margin: 15px 24px 15px 24px !important;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
-}
+  }
+  .header{
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+  }
 }
 
 .vrg-stats-section {
@@ -1236,7 +1243,7 @@
 
 @media (max-width: 600px) {
   .vrg-stock-section {
-    padding: 32px 0;
+    padding: 0;
   }
 
   .vrg-stock-container {
@@ -1499,7 +1506,7 @@
 
 @media (max-width: 700px) {
   .vrg-intro-section {
-    padding: 0 0 18px 0;
+    padding: 0;
     margin: 0;
   }
   .vrg-header-row {
@@ -1558,7 +1565,7 @@
     text-align: center;
   }
   .vrg-intro-right {
-    gap: 12px;
+    gap: 0;
     min-width: unset;
     align-items: center;
     padding: 0;

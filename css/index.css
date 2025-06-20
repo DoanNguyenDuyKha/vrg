@@ -9692,7 +9692,7 @@
                     display: block;
                     bottom: auto;
                     left: auto;
-                    margin: 15px 0
+                    margin: 0
                 }
 
                 .text-business-thumbs h2 {
@@ -9729,7 +9729,7 @@
                     width: 200px;
                     transform: none;
                     margin: 20px 0 0;
-                    background: green;
+                    background: #1ca046;
                     color: white;
                 }
 
