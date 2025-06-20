@@ -1490,7 +1490,7 @@
   }
   .vrg-explore-btn {
     width: 100%;
-    max-width: 220px;
+    max-width: 150px;
     padding: 10px 0;
     font-size: 1rem;
     margin: 0 auto 8px auto;
@@ -1524,6 +1524,8 @@
     padding: 0 4px;
     text-align: justify;
     line-height: 1.5;
+    font-weight: lighter;
+    text-align: center;
   }
   .vrg-intro-right {
     gap: 12px;
@@ -1573,6 +1575,17 @@
     max-width: 100%;
     text-align: center;
     padding: 0 2px;
+  }
+  .logo-text-vrg {
+    font-family: 'Oswald', 'Montserrat', Arial, sans-serif;
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    color: #1ca046;
+    letter-spacing: 1px;
+    display: block;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
   }
 }
 
