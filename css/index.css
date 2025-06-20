@@ -3311,52 +3311,6 @@
                 object-fit: contain
             }
 
-            .home-news {
-                padding: 0 0 13vw
-            }
-
-            .home-news .bg-cover img {
-                object-position: bottom;
-                object-fit: contain
-            }
-
-            .home-news .color-strip {
-                bottom: auto;
-                top: 9vw;
-                left: auto;
-                right: -4vw
-            }
-
-            .news-list-home {
-                position: relative;
-                display: flex
-            }
-
-            .news-list-home .item-news-home {
-                padding: 0 0 70px;
-                width: calc(31% - 30px);
-                margin: 0 20px 0 0
-            }
-
-            .news-list-home .txt-news-home h3 {
-                margin: 0 0 20px;
-                width: 90%
-            }
-
-            .news-list-home .view-more {
-                padding: 17px;
-                font-size: 13px;
-                width: 150px;
-                box-shadow: 0 10px 20px rgba(0,0,0,.1)
-            }
-
-            .news-list-home .item-news-home.item-video-home {
-                position: absolute;
-                top: 0;
-                right: 0;
-                padding: 0
-            }
-
             .content-recruitment h3,.wrap-item-video {
                 position: relative;
                 display: block
@@ -8395,13 +8349,6 @@
                     left: calc(70% - 2vw)
                 }
 
-                .home-news .color-strip {
-                    top: 11vw
-                }
-
-                .news-list-home .txt-news-home h3 {
-                    margin: 0 0 10px
-                }
 
                 .title-video-home {
                     font-size: 38px
@@ -8640,14 +8587,6 @@
 
                 .home-partner .color-strip {
                     left: 66%
-                }
-
-                .news-list-home {
-                    flex-wrap: wrap
-                }
-
-                .news-list-home .item-news-home {
-                    width: calc(50% - 30px)
                 }
 
                 .txt-news-home h3 {
@@ -9927,11 +9866,6 @@
                     width: 100%
                 }
 
-                .news-list-home .item-news-home {
-                    width: 100%;
-                    margin: 10px 0 20px;
-                    padding: 0 0 20px
-                }
 
                 .txt-news-home h3 {
                     font-size: 17px
