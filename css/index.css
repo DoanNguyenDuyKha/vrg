@@ -279,7 +279,7 @@
             .text-slogan span {
                 background: #eee;
                 font-size: 2.5vw;
-                font-weight: 500;
+                font-weight: 900;
                 text-transform: uppercase
             }
 
@@ -2836,7 +2836,7 @@
                 display: block;
                 width: 100%;
                 height: auto;
-                border-radius: 30px 0 30px 0;
+                border-radius: 50px 0 50px 0;
                 box-shadow: 0 10px 20px rgba(0,0,0,.2);
                 height: var(--height-thumb);
                 overflow: hidden
@@ -2946,7 +2946,7 @@
                 font-size: 60px;
                 font-weight: 700;
                 color: #08fd5e;
-                margin-right: 100px;
+                margin-right: 70px;
             }
 
             .home-jewelry .wrap-large {
