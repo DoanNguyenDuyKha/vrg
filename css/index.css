@@ -10617,6 +10617,9 @@
                     font-size: 30px;
                     padding: 0 0 20px
                 }
+                .banner::before {
+                    display: none;
+                }
             }
 
             @media screen and (max-width: 440px) {
