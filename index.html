@@ -1103,36 +1103,120 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
         })();
         </script>
         <script>
-        // DuyKha: Tự động tạo số chấm tròn theo số lượng tin tức và chuyển trang khi bấm dot
+        // DuyKha: Slider cho phần tin tức
         (function() {
-          var newsList = document.querySelector('.news-slider');
-          var dotsContainer = document.querySelector('.news-slider-dots');
-          if (!newsList || !dotsContainer) return;
-          var items = newsList.querySelectorAll('.media-news-item');
-          var perPage = 3;
-          var pageCount = Math.ceil(items.length / perPage);
-          function showPage(page) {
-            for (var i = 0; i < items.length; i++) {
-              items[i].style.display = (i >= page * perPage && i < (page + 1) * perPage) ? '' : 'none';
+          const slider = document.querySelector('.news-slider');
+          const dotsContainer = document.querySelector('.news-slider-dots');
+          if (!slider || !dotsContainer) return;
+
+          const items = slider.querySelectorAll('.media-news-item');
+          let isDown = false;
+          let startX;
+          let scrollLeft;
+          let autoplayInterval;
+          let timeoutId;
+
+          function getItemsPerPage() {
+            if (window.innerWidth <= 700) return 1;
+            if (window.innerWidth <= 1100) return 2;
+            return 3;
+          }
+
+          function getPageCount() {
+            const itemsPerPage = getItemsPerPage();
+            return Math.ceil(items.length / itemsPerPage);
+          }
+
+          function updateDots() {
+            const pageCount = getPageCount();
+            dotsContainer.innerHTML = '';
+
+            for (let i = 0; i < pageCount; i++) {
+              const dot = document.createElement('span');
+              dot.className = 'dot';
+              if (i === 0) dot.classList.add('active');
+              dot.addEventListener('click', () => {
+                const scrollAmount = i * slider.clientWidth;
+                slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+              });
+              dotsContainer.appendChild(dot);
             }
-            var dots = dotsContainer.querySelectorAll('.dot');
-            dots.forEach(function(dot, idx) {
-              dot.classList.toggle('active', idx === page);
+            updateActiveDot();
+          }
+
+          function updateActiveDot() {
+            const pageCount = getPageCount();
+            let currentPage = Math.round(slider.scrollLeft / slider.clientWidth);
+
+            // Correctly identify the last page, even if it's not a full page
+            const isAtEnd = slider.scrollLeft >= slider.scrollWidth - slider.clientWidth - 1;
+            if (isAtEnd) {
+              currentPage = pageCount - 1;
+            }
+
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+              dot.classList.toggle('active', index === currentPage);
             });
           }
-          // Khởi tạo dot
-          dotsContainer.innerHTML = '';
-          for (var i = 0; i < pageCount; i++) {
-            var dot = document.createElement('span');
-            dot.className = 'dot' + (i === 0 ? ' active' : '');
-            (function(pageIdx){
-              dot.addEventListener('click', function() {
-                showPage(pageIdx);
-              });
-            })(i);
-            dotsContainer.appendChild(dot);
+
+          function startAutoplay() {
+            stopAutoplay();
+            autoplayInterval = setInterval(() => {
+              const isAtEnd = slider.scrollLeft >= slider.scrollWidth - slider.clientWidth - 1;
+
+              if (isAtEnd) {
+                slider.scrollTo({ left: 0, behavior: 'smooth' });
+              } else {
+                slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+              }
+            }, 5000);
           }
-          showPage(0);
+
+          function stopAutoplay() {
+            clearInterval(autoplayInterval);
+          }
+
+          slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.style.cursor = 'grabbing';
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            stopAutoplay();
+          });
+
+          slider.addEventListener('mouseleave', () => {
+            if (!isDown) return;
+            isDown = false;
+            slider.style.cursor = 'grab';
+            startAutoplay();
+          });
+
+          slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.style.cursor = 'grab';
+            startAutoplay();
+          });
+
+          slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+          });
+          
+          slider.addEventListener('scroll', () => {
+              clearTimeout(timeoutId);
+              timeoutId = setTimeout(updateActiveDot, 150);
+          });
+
+          window.addEventListener('resize', updateDots);
+
+          // Khởi tạo
+          slider.style.cursor = 'grab';
+          updateDots();
+          startAutoplay();
         })();
         </script>
         <script>
@@ -1214,4 +1298,5 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
         })();
         </script>
 </body>
+</html>
 </html>

@@ -3354,12 +3354,18 @@ var SlidePicture = {
         }),
         n.on("mounted moved", function() {
             var e = u.querySelector(".thumbs-box-business.is-active")
-              , e = [].slice.call(e.parentNode.children).indexOf(e) + 1
+              , e = [].slice.call(e.parentNode.children).indexOf(e) // không +1 để bắt đầu từ 0
               , t = Container.querySelector(".slider-progress-bar")
               , o = Container.querySelector(".slider-number");
-            (t.style.width = (100 * e) / p.length + "%"),
-            (o.innerHTML = "0" + e + '<span class="slider-total">/' + (p.length < 10 ? '0' : '') + p.length + '</span>');
-        }),
+        
+            t.style.width = (100 * (e + 1)) / p.length + "%"; // vẫn dùng e+1 để tính phần trăm hiển thị chính xác
+        
+            o.innerHTML = 
+                (e < 10 ? "0" + e : e) + 
+                '<span class="slider-total">/' + 
+                ((p.length - 1) < 10 ? '0' : '') + (p.length - 1) + 
+                '</span>';
+        }),        
         d.addEventListener("swiperight", function(e) {
             f.click()
         }),

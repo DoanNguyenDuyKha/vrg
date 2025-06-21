@@ -97,8 +97,9 @@
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 14px 48px;
+  padding: 14px 20px;
   font-size: 1rem;
+  letter-spacing: 2px;
   font-weight: 600;
   cursor: pointer;
   margin-bottom: 18px;
@@ -1321,11 +1322,29 @@
   margin-top: 0;
 }
 .media-news-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  margin-top: 32px;
+  padding-bottom: 20px;
 }
+
+.media-news-list::-webkit-scrollbar {
+  display: none;
+}
+
+.media-news-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .media-news-item {
+  flex: 0 0 calc((100% / 3) - 16px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  margin-right: 24px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
@@ -1431,6 +1450,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
+  .media-news-item {
+    flex: 0 0 calc((100% / 2) - 12px);
+  }
   .media-tab {
     font-size: 1rem;
     padding: 0 10px 10px 10px;
@@ -1438,32 +1460,24 @@
 }
 @media (max-width: 700px) {
   .home-sustainble .wrap-content {
-    padding: 24px 16px;
-    overflow-x: hidden;
+    padding: 32px 0;
   }
   .media-tabs {
+    gap: 12px;
+    padding: 0 16px;
     overflow-x: auto;
-    flex-wrap: nowrap;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    margin: 0 -16px 24px -16px;
-    padding: 0 16px 10px 16px;
-    border-bottom: none;
-    gap: 24px;
+    justify-content: flex-start;
   }
   .media-tabs::-webkit-scrollbar {
-    display: none;
+      display: none;
   }
-
   .media-news-list.news-slider, .media-news-list {
-    display: grid !important;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    overflow: visible;
+     gap: 16px;
+     padding: 0 7.5%;
   }
   .news-slider .media-news-item {
-      flex-basis: auto;
-      min-width: 0;
+     flex: 0 0 85%;
+     scroll-snap-align: center;
   }
   .media-news-item {
     min-height: auto;
@@ -1677,7 +1691,7 @@
   flex-wrap: nowrap;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
-  gap: 32px;
+  gap: 7.5px;
   padding-bottom: 12px;
 }
 .media-news-item {
