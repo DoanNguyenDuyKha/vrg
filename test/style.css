@@ -306,7 +306,7 @@ body,html {
   width: 100vw;
   height: 100vh;
   right: 0;
-  background: rgba(6, 166, 79, 0.8);;
+  background: rgba(6, 166, 79, 0.8);
   z-index: 99999
 }
 
@@ -1291,11 +1291,6 @@ body,html {
       top: auto;
       bottom: 0;
       animation: WheelArrow2 2s infinite 1s
-  }
-
-  .wheel.show {
-      opacity: 1;
-      pointer-events: auto
   }
 
   .wheel:hover {
@@ -2581,7 +2576,7 @@ body,html {
   animation-fill-mode: forwards
 }
 
-.banner::before {
+/* .banner::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -2590,11 +2585,14 @@ body,html {
   bottom: 0;
   left: 0;
   z-index: 5
-}
+} */
 
 .slide-mask,.view-more {
   position: relative;
-  height: auto
+  height: auto;
+  font-family: 'Oswald';
+  font-size: 16px !important;
+  letter-spacing: 2px;
 }
 
 .slide-mask {
@@ -2787,7 +2785,7 @@ body,html {
   position: relative;
   display: block;
   width: 100%;
-  height: auto
+  height: 80%
 }
 
 .title-group-bus {
@@ -2936,9 +2934,10 @@ body,html {
 
 .slider-progress-bar {
   width: 0;
-  background-color: var(--coloractive);
+  background-color: #1ca046;
   transition: width .4s ease
 }
+
 
 .slider-number {
   position: relative;
@@ -2949,6 +2948,24 @@ body,html {
   margin-right: 70px;
 }
 
+.slider-number {
+  display: inline-flex;
+  align-items: baseline;   /* CHUẨN: căn đáy theo baseline */
+  font-size: 60px;         /* Số lớn */
+  font-weight: 700;
+  color: #08fd5e;
+  line-height: 1;
+}
+
+.slider-number .slider-total {
+  color: #888;
+  font-size: 28px;         /* Số nhỏ hơn */
+  margin-left: 6px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+}
+ 
 .home-jewelry .wrap-large {
   padding: 8vw 0 14vw;
   display: flex;
@@ -7458,7 +7475,7 @@ input[type=range]:focus::-moz-range-track {
 }
 
 .footer .wrap-content {
-  padding: 6vw 0 4vw
+  padding: 4vw 0 4vw
 }
 
 .footer .title-big h2 {
@@ -8286,10 +8303,12 @@ input[type=range]:focus::-moz-range-track {
 
   .view-more {
       width: 200px;
-      font-size: 12px;
+      font-size: 16px;
+      letter-spacing: 2px;
       padding: 17px;
       border-radius: 10px;
       font-weight: bold;
+      font-family: 'Oswald';
   }
 
   .box-jewelry-home .view-white.view-more.view-white {
@@ -9678,7 +9697,7 @@ input[type=range]:focus::-moz-range-track {
       display: block;
       bottom: auto;
       left: auto;
-      margin: 15px 0
+      margin: 0
   }
 
   .text-business-thumbs h2 {
@@ -9715,7 +9734,7 @@ input[type=range]:focus::-moz-range-track {
       width: 200px;
       transform: none;
       margin: 20px 0 0;
-      background: green;
+      background: #1ca046;
       color: white;
   }
 

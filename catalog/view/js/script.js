@@ -3353,19 +3353,33 @@ var SlidePicture = {
             l(e)
         }),
         n.on("mounted moved", function() {
-            var e = u.querySelector(".thumbs-box-business.is-active")
-              , e = [].slice.call(e.parentNode.children).indexOf(e) // không +1 để bắt đầu từ 0
-              , t = Container.querySelector(".slider-progress-bar")
-              , o = Container.querySelector(".slider-number");
+            var e = u.querySelector(".thumbs-box-business.is-active"),
+                index = [].slice.call(e.parentNode.children).indexOf(e), // index từ 0
+                t = Container.querySelector(".slider-progress-bar"),
+                o = Container.querySelector(".slider-number"),
+                topNumber = Container.querySelector(".slider-number-top"); // phần tử mới
         
-            t.style.width = (100 * (e + 1)) / p.length + "%"; // vẫn dùng e+1 để tính phần trăm hiển thị chính xác
+            // Cập nhật thanh tiến trình
+            t.style.width = (100 * (index + 1)) / p.length + "%";
         
+            // Tính số trang hiển thị: 2 slide đầu là 01, còn lại tăng từ 02
+            var displayedNumber = (index < 2) ? 1 : index;
+        
+            // Tổng số slide (hiển thị sau dấu /), trừ đi 1
+            var totalSlides = p.length - 1;
+        
+            // Hiển thị đầy đủ trong slider-number: VD 01/06
             o.innerHTML = 
-                (e < 10 ? "0" + e : e) + 
+                (displayedNumber < 10 ? "0" + displayedNumber : displayedNumber) + 
                 '<span class="slider-total">/' + 
-                ((p.length - 1) < 10 ? '0' : '') + (p.length - 1) + 
+                (totalSlides < 10 ? "0" + totalSlides : totalSlides) + 
                 '</span>';
-        }),        
+        
+            // Hiển thị chỉ số hiện tại trong slider-number-top: VD 01
+            if (topNumber) {
+                topNumber.innerHTML = (displayedNumber < 10 ? "0" + displayedNumber : displayedNumber);
+            }
+        }),                
         d.addEventListener("swiperight", function(e) {
             f.click()
         }),

@@ -1697,7 +1697,7 @@
 .media-news-item {
   flex: 0 0 calc(33.333% - 21.33px);
   scroll-snap-align: start;
-  min-width: 0;
+  min-width: 300px;
 }
 .news-slider-dots {
   display: flex;
