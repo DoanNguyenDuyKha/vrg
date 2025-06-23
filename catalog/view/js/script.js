@@ -2960,23 +2960,23 @@ function MouseCursor() {
         i.bordercolor = s),
         Object.assign({}, e, i)
     }
-    .bind(this);
-    document.addEventListener("mousemove", function(e) {
-        e = r(e);
-        t(n, e)
-    }
-    .bind(this)),
-    document.querySelectorAll("a, button, .nav-click").forEach(function(e) {
-        e.addEventListener("mouseenter", function() {
-            return l = e
-        }
-        .bind(this)),
-        e.addEventListener("mouseleave", function() {
-            return l = void 0
-        }
-        .bind(this))
-    }
-    .bind(this))
+    // .bind(this);
+    // document.addEventListener("mousemove", function(e) {
+    //     e = r(e);
+    //     t(n, e)
+    // }
+    // .bind(this)),
+    // document.querySelectorAll("a, button, .nav-click").forEach(function(e) {
+    //     e.addEventListener("mouseenter", function() {
+    //         return l = e
+    //     }
+    //     .bind(this)),
+    //     e.addEventListener("mouseleave", function() {
+    //         return l = void 0
+    //     }
+    //     .bind(this))
+    // }
+    // .bind(this))
 }
 function PrintShare() {
     var e = Container.querySelector(".share-but")
